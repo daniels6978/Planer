@@ -1,0 +1,32 @@
+.menu {
+    position: fixed;
+    width: 15vw;
+    height: 100vh;
+    padding-top: 20px;
+    background-color: #122036;
+    color: #E7EBF0;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.menu h1 {
+    margin-bottom: 30px;
+}
+
+.menu button {
+    display: block;
+    padding: 40px;
+    width: 100%;
+    font-size: 15px;
+    background-color: #122036;
+    color: #E7EBF0;
+    transition: background-color 1s;
+    text-decoration: none;
+    border: none;
+}
+
+.menu button:hover {
+    cursor: pointer;
+    background-color: #29364A;
+}
+

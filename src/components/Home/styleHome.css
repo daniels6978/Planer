@@ -1,0 +1,120 @@
+.dashboard__counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    width: 85vw;
+    left: 15vw;
+    background: none
+}
+
+
+.dashboard__counter--img {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-top: 40px;
+    background-image: url(./tło.png);
+    background-size: contain;
+    border-radius: 40px;
+}
+
+.dashboard__counter--names {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: black;
+}
+
+.dashboard__counter--birde {
+    top: 30%;
+    left: 50%;
+}
+
+.dashboard__counter--groom {
+    top: 40%;
+    left: 50%;
+}
+
+
+.dashboard__counter--day {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: #20d2d8;
+}
+
+.dashboard__pointers {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    top: 50vh;
+    left: 15vw;
+    height: 50vh;
+    width: 85vw;
+    background: none
+}
+
+.dashboard__pointers--div {
+    position: relative;
+    width: 400px;
+    margin: 20px;
+    height: 300px;
+    background-color: #122036;
+    color: #E7EBF0;
+    overflow: hidden;
+    border-radius: 50px;
+    box-shadow: 0 0 20px 6px #090b6f85;
+
+}
+
+.hidden__div {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 300px;
+    background-image: linear-gradient(to top, #a40baa, #bc009f, #cf0093, #df0086, #eb127a);
+    border-radius: 50px;
+    transition: 0.8s;
+}
+
+.dashboard__pointers--div::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: 150px;
+    width: 100%;
+    height: 1px;
+    background-color: #120907;
+}
+
+.dashboard__pointers--text {
+    position: relative;
+    top: 250px;
+    font-size: 18px;
+    transition: 0.8s;
+}
+
+.hidden__text {
+    position: relative;
+    top: 500px;
+    font-size: 50px;
+    color: #20d2d8;
+    transition: 0.8s;
+}
+
+.dashboard__pointers--div:hover .hidden__div {
+    top: 0;
+}
+
+.dashboard__pointers--div:hover .dashboard__pointers--text {
+    top: -200px;
+}
+
+.dashboard__pointers--div:hover .hidden__text {
+    top: 50%
+}
