@@ -33,17 +33,17 @@ function App() {
   //     break
   //   default:
   //     return 0;    
-        //texcik
-  const location = useLocation()
+    
+
 
   return ( 
     <div className="App">
       
-            <Switch location = {location} key = {location.pathname} >
-              <Route path='/stronaGlowna' component = {Home}/>
-              <Route path='/planZadan' component = {ToDo}/>
-              <Route path='/' component = {LoginPage}/>
-            </Switch>
+            <Routes >
+              <Route path='/stronaGlowna' element = {<Home/>}/>
+              <Route path='/planZadan' element = {<ToDo/>}/>
+              <Route path='/' element = {<LoginPage/>}/>
+            </Routes>
     
     </div>
     
