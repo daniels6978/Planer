@@ -1,4 +1,4 @@
-export const initialState = { user: "admin" };
+export const initialState = {user: {user: {taks: []}}};
 
 export function reducer(state, action) {
   switch (action.type) {
@@ -6,6 +6,10 @@ export function reducer(state, action) {
       return {
         user: action.payload,
       };
+    case "updateTodos":
+      const newState = {...state};
+      newState.user.user.tasks = action.payload;
+      return newState;
     default:
       return 0;
   }
