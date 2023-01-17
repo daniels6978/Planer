@@ -3,45 +3,188 @@
     width: 85vw;
     left: 15vw;
     height: 100%;
-    background: none;
+    /* background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%); */
 }
 
 .tasks {
+    position: absolute;  
+    left: 50%;  
+    transform: translateX(-50%);
+    width: 80%;
+    top: 200px;
+    padding: 25px 0;
+    padding-bottom: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #122036;
+    border-radius: 15px;
 }
 
-.toTo_title{
+.toDo_title{
     padding: 20px;
 }
 
 .task {
-    width: 80%;
-    /* border-radius: 15px; */
+    position: relative;
+    width: 100%;
+    color: #E7EBF0;
     overflow: hidden;
+    border-bottom: 1px solid #000000;
+}
+.task:hover {
+    background-color: #29364A;
 }
 
-.collapsible {
-    margin-top: 15px;
-    width: 100%;
-    padding: 10px 10px 10px 20px;
-    background-color: #122036;
-    color: #E7EBF0;
-    text-align: left;
-    cursor: pointer;
-    /* border-radius: 50px; */
-    /* box-shadow: 0 0 20px 6px #090b6f85; */
+.task:first-child{
+    border-top: 1px solid #000000;
 }
+
+.taskTitle{
+    width: 90%;
+    height: 100%;
+    padding: 25px;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #E7EBF0;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.taskEdit{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around ;
+    align-items: flex-start;
+    position: absolute;
+    left: 85%;
+    top: 0;
+    width: 10%;
+    height: 100%;
+ 
+}
+
+.taskEdit a{
+    margin-left: 10px;
+}
+
+.taskEdit i{
+    color: #E7EBF0;
+    font-size: 30px;
+}
+
+.taskEdit button{
+    padding: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.taskEdit button:hover i{
+    color: #eb127a;
+}
+
+.addTaskBtn{
+    margin: 25px 0px;
+    padding: 10px 40px;
+    left: 0px;
+    background-image: linear-gradient(to top, #a40baa, #bc009f, #cf0093, #df0086, #eb127a);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #E7EBF0;
+    border-radius: 10px;
+    
+}
+
+.addTaskBtn i{
+    transition: 1s;
+}
+.addTaskBtn:hover i{
+    transform: rotate(90deg);
+}
+
 
 .task_content {
     width: 100%;
     height: 0;
-    background-image: linear-gradient(to top, #a40baa, #bc009f, #cf0093, #df0086, #eb127a);
+    background-color: #5b87ce;
     transition-duration: .5s;
 }
 
 .active {
     height: 100px;
+}
+
+.addTaskBg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: #29364ae3;
+}
+
+.addTask{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: #122036;
+    color: #E7EBF0;
+    padding: 45px 25px 25px 25px;
+    box-shadow: 8px 8px 24px 0px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.addTask h3{
+    margin: 25px 0;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    padding: 15px;
+    color:#E7EBF0;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.closeBtn i{
+    transition: .3s;
+}
+
+.closeBtn:hover i {
+    transform: scale(1.4);
+}
+
+.addTask .imputs input{
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 25px;
+    font-size: 16px;
+    background: none;
+    color: #E7EBF0;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #B0B3B9;
+}
+
+.addTask .imputs .addTaskBtn {
+    margin-top: 70px;
+}
+
+.taskDescription{
+    text-align: left;
+    padding: 10px;
+}
+
+.taskDescription p{
+    padding: 2px;
 }
