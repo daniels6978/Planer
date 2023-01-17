@@ -26,6 +26,9 @@ function AddTask(props) {
           body: JSON.stringify(taskToAdd),
         }
       );
+
+      const data = await response.json();
+      props.dispatch({ type: "updateData", payload: data });
     }
   };
 
@@ -33,10 +36,7 @@ function AddTask(props) {
     <div className="addTaskBg">
       <div className="addTask">
         <h3>Dodaj zadanie</h3>
-        <button
-          onClick={() => props.dispatch({ type: "shTask", payload: false })}
-          className="closeBtn"
-        >
+        <button onClick={() => props.handleClose(false)} className="closeBtn">
           <i className="fa fa-close"></i>
         </button>
         <div className="imputs">
